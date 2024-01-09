@@ -1,5 +1,11 @@
 "use client";
-import { Button, Form, Input, InputError, Alert } from "@metalnethq/baremetal-ui";
+import {
+  Button,
+  Form,
+  Input,
+  InputError,
+  Alert,
+} from "@metalnethq/baremetal-ui";
 import { signIn } from "next-auth/react";
 import { useState } from "react";
 import z, { ZodError } from "zod";
@@ -75,11 +81,7 @@ function EmailLink() {
           </Button>
         </Form>
       )}
-      {emailSent && (
-        <Alert intent="success">
-          Email sent!
-        </Alert>
-      )}
+      {emailSent && <Alert intent="success">Email sent!</Alert>}
     </div>
   );
 }

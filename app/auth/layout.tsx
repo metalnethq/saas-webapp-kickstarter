@@ -1,12 +1,6 @@
 "use client";
 
-import {
-  Button,
-  Card,
-  Text,
-  CardBody,
-  CardHeading,
-} from "@metalnethq/baremetal-ui";
+import { Card, Text, CardBody, CardHeading } from "@metalnethq/baremetal-ui";
 import { useSession } from "next-auth/react";
 import { redirect } from "next/navigation";
 import { ReactNode } from "react";
