@@ -1,5 +1,5 @@
 "use client";
-import { Button, Form, Input, InputError } from "@metalnethq/baremetal-ui";
+import { Button, Form, Input, InputError, Alert } from "@metalnethq/baremetal-ui";
 import { signIn } from "next-auth/react";
 import { useState } from "react";
 import z, { ZodError } from "zod";
@@ -61,7 +61,6 @@ function EmailLink() {
             error={validationErrors}
             placeholder="Email"
             label=""
-            errorStyle={{ color: "red" }}
           />
 
           <Button
@@ -77,9 +76,9 @@ function EmailLink() {
         </Form>
       )}
       {emailSent && (
-        <div className="text-bm_info-800 rounded mt-3 p-2 bg-bm_info-50 border-bm_info-800">
+        <Alert intent="success">
           Email sent!
-        </div>
+        </Alert>
       )}
     </div>
   );
